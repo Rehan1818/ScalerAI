@@ -4,11 +4,21 @@ A functional clone of the AWS Route 53 web console with persistent SQLite storag
 
 ## Demo
 
-After setup, access:
-- **Frontend:** http://localhost:3000
-- **Backend API docs:** http://localhost:8000/docs
+Live URL:
+- Backend - https://route53-api.onrender.com
+- Frontend - https://route53-frontend.onrender.com
 
 **Demo login:** `admin` / `admin123`
+
+## Screenshots
+
+
+
+<img width="1366" height="658" alt="image" src="https://github.com/user-attachments/assets/3ec4a536-99de-4f9c-92db-6528170a3b16" />
+
+<img width="1366" height="653" alt="image" src="https://github.com/user-attachments/assets/4550f844-3c54-4fc4-9e69-87b453a19a9a" />
+
+
 
 ## Tech Stack
 

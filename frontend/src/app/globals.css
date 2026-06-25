@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --aws-orange: #ff9900;
+  --aws-dark: #232f3e;
+  --aws-darker: #1a242f;
+  --aws-sidebar: #232f3e;
+  --aws-border: #d5dbdb;
+  --aws-text: #16191f;
+  --aws-muted: #545b64;
+  --aws-link: #0073bb;
+  --aws-bg: #fafafa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Amazon Ember", "Helvetica Neue", Roboto, Arial, sans-serif;
+  color: var(--aws-text);
+  background: var(--aws-bg);
+}
+
+@layer components {
+  .aws-btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded border border-[#ec7211] bg-[#ec7211] px-4 py-1.5 text-sm font-medium text-white shadow-sm transition hover:bg-[#eb5f07] hover:border-[#eb5f07] disabled:opacity-50;
+  }
+
+  .aws-btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded border border-[#545b64] bg-white px-4 py-1.5 text-sm font-medium text-[#16191f] shadow-sm transition hover:bg-[#fafafa] disabled:opacity-50;
+  }
+
+  .aws-btn-link {
+    @apply text-sm font-medium text-[#0073bb] hover:text-[#005276] hover:underline;
+  }
+
+  .aws-input {
+    @apply w-full rounded border border-[#879596] px-3 py-1.5 text-sm shadow-sm focus:border-[#0073bb] focus:outline-none focus:ring-1 focus:ring-[#0073bb];
+  }
+
+  .aws-table {
+    @apply w-full border-collapse text-sm;
+  }
+
+  .aws-table th {
+    @apply border-b border-[#eaeded] bg-[#fafafa] px-4 py-2 text-left font-semibold text-[#16191f];
+  }
+
+  .aws-table td {
+    @apply border-b border-[#eaeded] px-4 py-2 align-top text-[#16191f];
+  }
+
+  .aws-table tr:hover td {
+    @apply bg-[#f2f3f3];
+  }
+
+  .aws-card {
+    @apply rounded border border-[#eaeded] bg-white shadow-sm;
+  }
+
+  .aws-page-header {
+    @apply mb-4 flex flex-wrap items-start justify-between gap-4;
+  }
+
+  .aws-page-title {
+    @apply text-2xl font-normal text-[#16191f];
+  }
+
+  .aws-breadcrumb {
+    @apply mb-2 text-xs text-[#545b64];
+  }
+
+  .aws-breadcrumb a {
+    @apply text-[#0073bb] hover:underline;
+  }
+
+  .aws-badge {
+    @apply inline-flex rounded px-2 py-0.5 text-xs font-medium;
+  }
+
+  .aws-modal-overlay {
+    @apply fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4;
+  }
+
+  .aws-modal {
+    @apply w-full max-w-lg rounded bg-white shadow-xl;
+  }
+
+  .aws-toast-container {
+    @apply fixed right-4 top-4 z-[100] flex flex-col gap-2;
+  }
+
+  .aws-toast {
+    @apply flex min-w-[280px] items-start gap-3 rounded border bg-white px-4 py-3 shadow-lg;
+  }
+
+  .aws-toast-success {
+    @apply border-l-4 border-l-[#1d8102];
+  }
+
+  .aws-toast-error {
+    @apply border-l-4 border-l-[#d13212];
+  }
+
+  .aws-toast-info {
+    @apply border-l-4 border-l-[#0073bb];
+  }
+}
